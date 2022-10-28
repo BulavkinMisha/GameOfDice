@@ -1,13 +1,10 @@
 public class Dice {
-    public int firstDice;
-    public int secondDice;
+    static Random random = new Random();
 
-    Random random = new Random();
+    public static void diceCombination() {
 
-    public void diceCombination() {
-
-        firstDice = random.randomNumber();
-        secondDice = random.randomNumber();
+        int firstDice = random.randomNumber();
+        int secondDice = random.randomNumber();
 
         System.out.println(firstDice + " и "
                 + secondDice + " - Выпавшие числа на костях");
@@ -18,10 +15,10 @@ public class Dice {
                 ((firstDice == 4)&&(secondDice == 4))||
                 ((firstDice == 5)&&(secondDice == 5))||
                 ((firstDice == 6)&&(secondDice == 6))) {
-            System.out.println("О, Поевзло повезло");
+            System.out.println("О, Поевзло повезло! (Win)");
         }
         else {
-            System.out.println("Хи-хи-ха!");
+            System.out.println("Хи-хи-ха! (Lose)");
         }
     }
 }
